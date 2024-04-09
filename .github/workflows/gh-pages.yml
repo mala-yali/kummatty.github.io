@@ -1,30 +1,34 @@
 name: Zola on GitHub Pages
 
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/master'
     steps:
-      - name: 'checkout'
+      - name: Checkout branch
         uses: actions/checkout@v4
-      - name: 'build'
-        uses: shalzz/zola-deploy-action@v0.17.2
+      - name: Build only
+        uses: shalzz/zola-deploy-action@v0.18.0
         env:
-          PAGES_BRANCH: gh-pages
           BUILD_DIR: .
-          TOKEN: ${{ secrets.TOKEN }}
           BUILD_ONLY: true
+          BUILD_FLAGS: --drafts
+          
   build_and_deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
-      - name: 'checkout'
+      - name: Checkout master
         uses: actions/checkout@v4
-      - name: 'build and deploy'
-        uses: shalzz/zola-deploy-action@v0.17.2
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.18.0
         env:
-          PAGES_BRANCH: master
+          PAGES_BRANCH: gh-pages
           BUILD_DIR: .
-          TOKEN: ${{ secrets.PUBLIC_TOKEN }}
-          REPOSITORY: username/username.github.io
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
