@@ -1,0 +1,106 @@
+# The URL the site will be built for
+base_url = "https://kummatty.yali.fi"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+
+build_search_index = false
+
+theme = "lightspeed"
+
+sort_by = "date"
+
+title = "കുമ്മാട്ടി പ്രോജക്ട്"
+description = ""
+minify_html = true
+generate_feed = true
+feed_filename = "atom.xml"
+default_language = "ml"
+
+taxonomies = [
+    {name = "ലിസ്റ്റ്", feed = true}, # each tag will have its own feed
+    {name = "തരം", paginate_by = 10, feed = true},  # സിനിമ, സീരിയൽ, നാടകം, പാട്ടു് എന്നിങ്ങനെ എന്തുമാകാം.
+    {name = "ഡയറക്ടർ", feed = true, paginate_by = 10},
+    {name = "ഴാൺഴേ", feed = true, paginate_by = 10},
+    {name = "അവാർഡുകൾ", feed = true, paginate_by = 10},
+    {name = "റിലീസ് ചെയ്ത വർഷം", feed = true, paginate_by = 10},
+    {name = "കഥാകൃത്ത്", feed = true, paginate_by = 10},
+    {name = "തിരക്കഥ", feed = true, paginate_by = 10},
+    {name = "സംഭാഷണം", feed = true, paginate_by = 10},
+    {name = "സംഗീതം", feed = true, paginate_by = 10},
+    {name = "ഛായാഗ്രഹണം", feed = true, paginate_by = 10},
+    {name = "എഡിറ്റർ", feed = true, paginate_by = 10},
+    {name = "ലാബ്", feed = true, paginate_by = 10},
+    {name = "ശബ്ദലേഖനം", feed = true, paginate_by = 10},
+    {name = "നിർമ്മാതാവ്", feed = true, paginate_by = 10},
+    {name = "director", feed = true, paginate_by = 10},
+]
+
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+render_emoji = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = true
+lazy_async_image = true
+
+[slugify]
+paths = "safe"
+taxonomies = "on"
+anchors = "on"
+# Whether to remove date prefixes for page path slugs.
+# For example, content/posts/2016-10-08_a-post-with-dates.md => posts/a-post-with-dates
+# When true, content/posts/2016-10-08_a-post-with-dates.md => posts/2016-10-08-a-post-with-dates
+paths_keep_dates = false
+
+
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
+
+footer_links = [
+    {url = "$BASE_URL/about", name = "👋🏽 ഹലോ"},
+    {url = "$BASE_URL/atom.xml", name = "🗂 RSS"},
+    {url = "https://t.me/KummattyTheatre", name = "✈️ ചാനൽ"},
+    {url = "https://www.instagram.com/kummattyproject", name = "📸 പേജ്"},
+]
+
+zola = false
+netlify = false
+maintained_with_love = false
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+index_format = "elasticlunr_javascript"
+
+[translations]
+
+# Additional languages definition
+# You can define language specific config values and translations: 
+# title, description, generate_feed, feed_filename, taxonomies, build_search_index
+# as well as its own search configuration and translations (see above for details on those)
+[languages]
+# For example
+[languages.en]
+title = "The Kummatty Project"
+generate_feed = true
+taxonomies = [
+    {name = "tags", feed = true}, # each tag will have its own feed
+    {name = "categories", paginate_by = 10},  # 10 items per page for a term
+]
+build_search_index = true
