@@ -2,3 +2,25 @@
 {% block extra_head %}
 <link rel="canonical" href="{{page.permalink | safe }}">
 {% endblock extra_head %}
+
+{% block content %}
+{% block article %}
+<article>
+  <h1>{{ page.title }}</h1>
+
+  {% if page.date %}
+    <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
+  {% endif %}
+
+  {{ page.content | safe }}
+</article>
+{% endblock article %}
+{% block comments %}
+<section id="comment-section">
+    {% if page.chat_id %}
+    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="{{ page.chat_id }}" data-comments-limit="20" data-colorful="1" data-color="8B0000" data-dark-color="8B0000">
+  {% endif %}
+</script>
+</section>
+{% endblock comments %}
+{% endblock content %}
