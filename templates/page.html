@@ -1,6 +1,6 @@
 {% extends "lightspeed/templates/page.html" %}
 {% block extra_head %}
-<link rel="canonical" href="{{page.permalink | safe }}">
+<link rel="canonical" href="{{ page.permalink | safe }}">
 {% endblock extra_head %}
 
 {% block content %}
@@ -17,10 +17,10 @@
 {% endblock article %}
 {% block comments %}
 <section id="comment-section">
-    {% if page.chat_id %}
-    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="{{ page.chat_id }}" data-comments-limit="20" data-colorful="1" data-color="8B0000" data-dark-color="8B0000">
+    {% if page.extra.chat_id %}
+    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-discussion="{{ page.extra.chat_id }}" data-comments-limit="20" data-colorful="1" data-color="8B0000" data-dark-color="8B0000">
+    </script>
   {% endif %}
-</script>
 </section>
 {% endblock comments %}
 {% endblock content %}
