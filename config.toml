@@ -13,7 +13,7 @@ theme = "lightspeed"
 sort_by = "date"
 
 title = "കുമ്മാട്ടി പ്രോജക്ട്"
-description = ""
+description = "കാഴ്ചകൾ, കെട്ടുകാഴ്ചകൾ കാഴ്ചപ്പാടുകൾ"
 minify_html = true
 generate_feed = true
 feed_filename = "atom.xml"
@@ -67,12 +67,14 @@ highlight_code = true
 # Put all your custom variables here
 
 footer_links = [
+    {url = "$BASE_URL/en", name = "🇪 En "},
     {url = "$BASE_URL/about", name = "👋🏽 ഹലോ"},
     {url = "$BASE_URL/atom.xml", name = "🗂 RSS"},
     {url = "https://t.me/KummattyTheatre", name = "✈️ ചർച്ചകൾ"},
     {url = "https://www.instagram.com/kummattyproject", name = "📸 പേജ്"},
 ]
-
+ogimage = "/images/Kummatty.jpg"
+author = "@moolekkari"
 zola = false
 netlify = false
 maintained_with_love = false
@@ -98,9 +100,24 @@ index_format = "elasticlunr_javascript"
 # For example
 [languages.en]
 title = "The Kummatty Project"
+description = "Movies, Theatres, Narratives and Ways of seeing"
 generate_feed = true
+build_search_index = true
 taxonomies = [
     {name = "tags", feed = true}, # each tag will have its own feed
-    {name = "categories", paginate_by = 10},  # 10 items per page for a term
+    {name = "list", feed = true}, # each tag will have its own feed
+    {name = "director", feed = true, paginate_by = 10},
+    {name = "type", paginate_by = 10, feed = true},  # സിനിമ, സീരിയൽ, നാടകം, പാട്ടു് എന്നിങ്ങനെ എന്തുമാകാം.
+    {name = "genre", feed = true, paginate_by = 10},
+    {name = "awards", feed = true, paginate_by = 10},
+    {name = "release year", feed = true, paginate_by = 10},
+    {name = "writer", feed = true, paginate_by = 10},
+    {name = "script", feed = true, paginate_by = 10},
+    {name = "dialogue", feed = true, paginate_by = 10},
+    {name = "music", feed = true, paginate_by = 10},
+    {name = "cinematography", feed = true, paginate_by = 10},
+    {name = "editor", feed = true, paginate_by = 10},
+    {name = "lab", feed = true, paginate_by = 10},
+    {name = "sound", feed = true, paginate_by = 10},
+    {name = "producer", feed = true, paginate_by = 10},
 ]
-build_search_index = true
