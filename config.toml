@@ -35,7 +35,7 @@ taxonomies = [
     {name = "ലാബ്", feed = true, paginate_by = 10},
     {name = "ശബ്ദലേഖനം", feed = true, paginate_by = 10},
     {name = "നിർമ്മാതാവ്", feed = true, paginate_by = 10},
-    {name = "director", feed = true, paginate_by = 10},
+    {name = "അഭിനേതാക്കൾ", feed = true, paginate_by = 10},
 ]
 
 highlight_code = true
@@ -120,4 +120,5 @@ taxonomies = [
     {name = "lab", feed = true, paginate_by = 10},
     {name = "sound", feed = true, paginate_by = 10},
     {name = "producer", feed = true, paginate_by = 10},
+    {name = "actors", feed = true, paginate_by = 10},
 ]
