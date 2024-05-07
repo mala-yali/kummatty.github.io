@@ -25,7 +25,7 @@ taxonomies = [
     {name = "ഡയറക്ടർ", feed = true, paginate_by = 10},
     {name = "ഴാൺഴേ", feed = true, paginate_by = 10},
     {name = "അവാർഡുകൾ", feed = true, paginate_by = 10},
-    {name = "റിലീസ് ചെയ്ത വർഷം", feed = true, paginate_by = 10},
+    {name = "റിലീസ്-ചെയ്ത-വർഷം", feed = true, paginate_by = 10},
     {name = "കഥാകൃത്ത്", feed = true, paginate_by = 10},
     {name = "തിരക്കഥ", feed = true, paginate_by = 10},
     {name = "സംഭാഷണം", feed = true, paginate_by = 10},
@@ -36,6 +36,8 @@ taxonomies = [
     {name = "ശബ്ദലേഖനം", feed = true, paginate_by = 10},
     {name = "നിർമ്മാതാവ്", feed = true, paginate_by = 10},
     {name = "അഭിനേതാക്കൾ", feed = true, paginate_by = 10},
+    {name = "സീരീസ്", feed = true, paginate_by = 10},
+    {name = "ഭാഷ", feed = true, paginate_by = 10},
 ]
 
 highlight_code = true
@@ -110,7 +112,7 @@ taxonomies = [
     {name = "type", paginate_by = 10, feed = true},  # സിനിമ, സീരിയൽ, നാടകം, പാട്ടു് എന്നിങ്ങനെ എന്തുമാകാം.
     {name = "genre", feed = true, paginate_by = 10},
     {name = "awards", feed = true, paginate_by = 10},
-    {name = "release year", feed = true, paginate_by = 10},
+    {name = "release-year", feed = true, paginate_by = 10},
     {name = "writer", feed = true, paginate_by = 10},
     {name = "script", feed = true, paginate_by = 10},
     {name = "dialogue", feed = true, paginate_by = 10},
@@ -121,4 +123,6 @@ taxonomies = [
     {name = "sound", feed = true, paginate_by = 10},
     {name = "producer", feed = true, paginate_by = 10},
     {name = "actors", feed = true, paginate_by = 10},
+    {name = "langauges", feed = true, paginate_by = 10},
+    {name = "series", feed = true, paginate_by = 10},
 ]
