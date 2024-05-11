@@ -70,7 +70,7 @@ highlight_code = true
 
 footer_links = [
     {url = "$BASE_URL/en", name = "🇪 En "},
-    {url = "$BASE_URL/about", name = "👋🏽 ഹലോ"},
+    {url = "$BASE_URL/ഹലോ", name = "👋🏽 ഹലോ"},
     {url = "$BASE_URL/atom.xml", name = "🗂 RSS"},
     {url = "https://t.me/KummattyTheatre", name = "✈️ ചർച്ചകൾ"},
     {url = "https://www.instagram.com/kummattyproject", name = "📸 പേജ്"},

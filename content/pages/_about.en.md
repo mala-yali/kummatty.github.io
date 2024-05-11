@@ -1,7 +1,10 @@
 +++
 title = "👋🏽 Hello"
-path = "en/about"
+path = "about"
 +++
+
+
+[മലയാളത്തിൽ](@/pages/_about.md) വായിക്കാം.
 
 Kummatty is a folklore. A demigod(?). Desi version of Pied piper. He goes to villages after villages. Sings, dances and performs magic tricks. Sometimes, it transforms  a kiddo into a doggo. Cinema is Kummatti.
 
